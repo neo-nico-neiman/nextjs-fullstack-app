@@ -1,22 +1,19 @@
-import CatCard from '../components/cards/cat/CatCard';
-import { mockCatCardProps } from '../components/cards/cat/CatCard.mocks';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import SidebarLayout from '../components/layouts/sidebar/SidebarLayout';
 import styles from '../styles/Home.module.css';
 import { NextPageWithLayout } from './page';
 
-const Home: NextPageWithLayout = () => {
+const About: NextPageWithLayout = () => {
   return (
     <section className={styles.main}>
-      <h1 className={styles.title}>Welcome to Nextjs</h1>
-      <CatCard {...mockCatCardProps.base} />
+      <h1 className={styles.title}>This is the about page</h1>
     </section>
   );
 };
 
-export default Home;
+export default About;
 
-Home.getLayout = (page) => {
+About.getLayout = (page) => {
   return (
     <PrimaryLayout>
       <SidebarLayout />

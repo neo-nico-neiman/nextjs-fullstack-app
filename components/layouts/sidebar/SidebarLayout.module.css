@@ -1,0 +1,26 @@
+.nav {
+  background-color: peachpuff;
+  padding: 8px 4px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 200px;
+}
+
+.nav a {
+  background-color: white;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 8px;
+}
+
+.nav a:hover {
+  background-color: cornflowerblue;
+  color: whitesmoke;
+}
+
+.input {
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 12px 4px 8px;
+}
