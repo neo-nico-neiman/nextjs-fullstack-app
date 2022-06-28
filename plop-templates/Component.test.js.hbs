@@ -1,0 +1,10 @@
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+
+import {{pascalCase name}} from './{{pascalCase name}}';
+
+// Sample this test
+test('example', () => {
+  render(<{{pascalCase name}} />);
+  expect(screen.queryByText(/{{pascalCase name}}/i)).toBeInTheDocument();
+});
