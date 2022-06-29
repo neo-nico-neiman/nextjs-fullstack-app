@@ -21,10 +21,10 @@ const Search: React.FC<ISearch> = () => {
         onChange={(event) => setSearch(event.target?.value)}
       ></input>
       <div className="space-x-3">
-        <button type="submit" className="btn-primary">
+        <button type="submit" className="btn-secondary">
           Google Search
         </button>
-        <button type="submit" className="btn-primary">
+        <button type="submit" className="btn-secondary">
           I&apos;m Feeling Lucky
         </button>
       </div>

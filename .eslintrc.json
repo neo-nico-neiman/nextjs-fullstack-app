@@ -18,5 +18,8 @@
         "storybook/hierarchy-separator": "error"
       }
     }
-  ]
+  ],
+  "env": {
+    "jest": true
+  }
 }
