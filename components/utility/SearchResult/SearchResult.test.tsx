@@ -29,6 +29,6 @@ describe('Footer', () => {
 
   test('Should include a text description', () => {
     render(<SearchResult {...mockSearchResultProps.base} />);
-    expect(screen.getByText('Sample result')).toBeInTheDocument();
+    expect(screen.getByText(/Lorem ipsum dolor sit amet/i)).toBeInTheDocument();
   });
 });
