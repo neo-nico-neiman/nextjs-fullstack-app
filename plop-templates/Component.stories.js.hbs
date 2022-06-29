@@ -9,7 +9,6 @@ export default {
 } as ComponentMeta<typeof {{pascalCase name}}>;
 
 const Template: ComponentStory<typeof {{pascalCase name}}> = (args) => <{{pascalCase name}} {...args} />;
-Template.args = {};
 
 export const Example = Template.bind({});
-Example.args = {};
+Example.args = {...mock{{pascalCase name}}Props.base};
