@@ -1,10 +1,12 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '@test-utils/test-utils';
 
 import {{pascalCase name}} from './{{pascalCase name}}';
 
-// Sample this test
-test('example', () => {
-  render(<{{pascalCase name}} />);
-  expect(screen.queryByText(/{{pascalCase name}}/i)).toBeInTheDocument();
+
+describe('{{pascalCase name}}', () => {
+  test('Should match the snapshot', () => {
+    const { asFragment } = render(<{{pascalCase name}} />);
+    expect(asFragment).toMatchSnapshot();
+  });
 });
