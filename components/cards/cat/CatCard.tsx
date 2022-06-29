@@ -37,7 +37,7 @@ const CatCard: React.FC<ICatCard> = ({ tag, title, body, author, time }) => {
               height="40"
             />
             <div className={styles.user__info}>
-              <h5>{author}</h5>
+              <h5 className="test">{author}</h5>
               <small>{time}</small>
             </div>
           </div>
