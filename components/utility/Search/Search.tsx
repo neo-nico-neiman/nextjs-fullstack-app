@@ -1,22 +1,14 @@
-import axios from 'axios';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
-
 export interface ISearch {}
 
 const Search: React.FC<ISearch> = () => {
   const [search, setSearch] = useState<string>('');
+  const router = useRouter();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    try {
-      const res = await axios.post('api/search/', {
-        searchTerm: search,
-      });
-      const data = await res.data;
-      console.log(data);
-    } catch (e) {
-      console.log(e);
-    }
+    search !== '' && router.push(`/results?search=${search}`);
   };
 
   return (
