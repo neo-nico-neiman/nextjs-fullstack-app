@@ -1,12 +1,10 @@
 
 import styles from './{{pascalCase name}}.module.css';
 
-export interface I{{pascalCase name}} {
+export interface I{{pascalCase name}} extends React.ComponentPropsWithoutRef<''>{}
 
-}
-
-const {{pascalCase name}}: React.FC<I{{pascalCase name}}> = () => {
-  return <div className={styles.container}></div>;
+const {{pascalCase name}}: React.FC<I{{pascalCase name}}> = ({className, ...buttonProps}) => {
+  return <div {...buttonProps} className={`${className}`}></div>;
 };
 
 export default {{pascalCase name}};
