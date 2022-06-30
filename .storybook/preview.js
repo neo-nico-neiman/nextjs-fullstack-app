@@ -1,6 +1,7 @@
 // @ts-check
 import * as NextImage from 'next/image';
 import '../pages/globals.css';
+import Providers from '../state/providers';
 
 const BREAKPOINTS_INT = {
   xs: 375,
@@ -43,3 +44,11 @@ export const parameters = {
   },
   viewport: { viewports: customViewports },
 };
+
+export const decorators = [
+  (Story) => (
+    <Providers>
+      <Story />
+    </Providers>
+  ),
+];

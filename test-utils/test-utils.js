@@ -1,11 +1,6 @@
 // test-utils.js
+import Providers from '@state/providers';
 import { render } from '@testing-library/react';
-
-// Add in any providers here if necessary:
-// (ReduxProvider, ThemeProvider, etc)
-const Providers = ({ children }) => {
-  return children;
-};
 
 const customRender = (ui, options = {}) =>
   render(ui, { wrapper: Providers, ...options });

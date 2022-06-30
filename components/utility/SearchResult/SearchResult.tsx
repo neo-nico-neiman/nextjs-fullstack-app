@@ -1,10 +1,7 @@
+import { ISearchData } from 'lib/data/types';
 import Link from 'next/link';
 
-export interface ISearchResult extends React.ComponentPropsWithoutRef<'div'> {
-  url: string;
-  title: string;
-  text: string;
-}
+export type ISearchResult = ISearchData & React.ComponentPropsWithoutRef<'div'>;
 
 const SearchResult: React.FC<ISearchResult> = ({
   url,
@@ -16,7 +13,7 @@ const SearchResult: React.FC<ISearchResult> = ({
   return (
     <div
       {...divProps}
-      className={`flex flex-col w-5/6 max-w-screen-md space-y1 ${className}`}
+      className={`flex flex-col w-5/6 max-w-screen-md gap-y-1 ${className}`}
     >
       <Link href={url}>
         <a
